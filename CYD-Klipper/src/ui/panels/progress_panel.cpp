@@ -196,11 +196,12 @@ void progress_panel_init(lv_obj_t* panel){
 
     label = lv_label_create(text_panel);
     lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-    lv_label_set_text(label, "Nozel:");
+    lv_label_set_text(label, LV_SYMBOL_DOWNLOAD);
+
 
     label = lv_label_create(text_panel);
     lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-    lv_label_set_text(label, "Bed:");
+    lv_label_set_text(label, LV_SYMBOL_UPLOAD);
 
     // Elapsed Time
     label = lv_label_create(time_panel);
@@ -257,7 +258,7 @@ void progress_panel_init(lv_obj_t* panel){
     label = lv_label_create(btn);
     lv_label_set_text(label, LV_SYMBOL_STOP);
     lv_obj_center(label);
-
+    
     // Resume Button
     if (printer.state == PRINTER_STATE_PAUSED){
         btn = lv_btn_create(panel);
